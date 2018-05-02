@@ -1,0 +1,27 @@
+
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+<RootScreen>:
+    transition: FadeTransition()
+    MainScreen:
+    WorkingScreen:
+
+<MainScreen>:
+    name: 'mainscreen'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        source: "tomp3.png"
+
+<WorkingScreen>:
+    name: 'workingscreen'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        source: "tomp3.png"
+    Image:
+        source: "working.gif"
